@@ -38,16 +38,46 @@
             height: 300px;
         }
 
-        .msg {
+        .msgTextArea {
             height: 40px;
             width: 290px;
             resize: none;
+            padding: 3px;
         }
 
         .control {
+            height: 55px;
             position: fixed;
             bottom: 0;
             background-color: #ccc;
+            padding: 5px;
+        }
+
+        .incomeMsg {
+            width: 200px;
+            margin-top: 3px;
+            padding: 5px;
+            color: white;
+            background-color: #757eff;
+            border-radius: 5px;
+            float: left;
+            word-break: break-all;
+        }
+
+        .outcomeMsg {
+            width: 200px;
+            padding: 5px;
+            margin-top: 3px;
+            color: white;
+            background-color: #ff1f7b;
+            border-radius: 5px;
+            word-break: break-all;
+            float: right;
+        }
+
+        .msgs {
+            height: 245px;
+            overflow: auto;
             padding: 5px;
         }
     </style>
@@ -58,8 +88,16 @@
             Chat+ Web
         </div>
         <div class="chat-body">
+            <div class="msgs">
+                <div class="incomeMsg">
+                    Hahahhasdkfjlsjflsjfsjflsflsjflskjfsdkfslfjslkfj
+                </div>
+                <div class="outcomeMsg">
+                    Hahahhasdkfjlsjflsjfsjflsflsjflskjfsdkfslfjslkfj
+                </div>
+            </div>
             <div class="control">
-                <textarea class="msg form-control" placeholder="Напишите сообщение"></textarea>
+                <textarea class="msgTextArea form-control" placeholder="Напишите сообщение"></textarea>
             </div>
         </div>
     </div>
