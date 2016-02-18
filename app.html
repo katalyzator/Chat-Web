@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat+ Web App</title>
+    <script src="libs/jquery.js"></script>
+    <script src="libs/strophe.min.js"></script>
+    <script src="app.js"></script>
+
+    <link href="libs/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.chat {
+            position: fixed;
+            bottom: 0;
+            right: 70px;
+            width: 300px;
+            box-shadow: 0 0 10px #468b2f;
+        }
+
+        div.chat-header {
+            background-color: #468b2f;
+            color: white;
+            padding: 3px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px #468b2f;
+        }
+
+        div.chat-body {
+            height: 300px;
+        }
+
+        .msg {
+            height: 40px;
+            width: 290px;
+            resize: none;
+        }
+
+        .control {
+            position: fixed;
+            bottom: 0;
+            background-color: #ccc;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat">
+        <div class="chat-header">
+            Chat+ Web
+        </div>
+        <div class="chat-body">
+            <div class="control">
+                <textarea class="msg form-control" placeholder="Напишите сообщение"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
