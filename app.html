@@ -5,7 +5,6 @@
     <title>Chat+ Web App</title>
     <script src="libs/jquery.js"></script>
     <script src="libs/strophe.min.js"></script>
-    <script src="app.js"></script>
 
     <link href="libs/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
@@ -15,7 +14,7 @@
             padding: 0;
         }
 
-        div.chat {
+        #chat {
             position: fixed;
             bottom: 0;
             right: 70px;
@@ -23,7 +22,7 @@
             box-shadow: 0 0 10px #468b2f;
         }
 
-        div.chat-header {
+        #chat-header {
             background-color: #468b2f;
             color: white;
             padding: 3px;
@@ -34,18 +33,18 @@
             box-shadow: 0 0 10px #468b2f;
         }
 
-        div.chat-body {
+        #chat-body {
             height: 300px;
         }
 
-        .msgTextArea {
+        #msgTextArea {
             height: 40px;
             width: 290px;
             resize: none;
             padding: 3px;
         }
 
-        .control {
+        #control {
             height: 55px;
             position: fixed;
             bottom: 0;
@@ -75,7 +74,7 @@
             float: right;
         }
 
-        .msgs {
+        #msgs {
             height: 245px;
             overflow: auto;
             padding: 5px;
@@ -84,33 +83,26 @@
             float: left;
             margin: 1px;
             box-shadow: 0 0 10px #000000;
-
-
-
         }
     </style>
 </head>
 <body>
-    <div class="chat">
-        <div class="chat-header">
-            <div class="hide-button">
-                <a href="">Свернуть</a>
-            </div>
+    <div id="chat">
+        <div id="chat-header">
+            <!--<div class="hide-button">-->
+                <!--<a href="">Свернуть</a>-->
+            <!--</div>-->
             Chat+ Web
         </div>
-        <div class="chat-body">
-            <div class="msgs">
-                <div class="incomeMsg">
-                    Hahahhasdkfjlsjflsjfsjflsflsjflskjfsdkfslfjslkfj
-                </div>
-                <div class="outcomeMsg">
-                    Hahahhasdkfjlsjflsjfsjflsflsjflskjfsdkfslfjslkfj
-                </div>
+        <div id="chat-body">
+            <div id="msgs">
+
             </div>
-            <div class="control">
-                <textarea class="msgTextArea form-control" placeholder="Напишите сообщение"></textarea>
+            <div id="control">
+                <textarea id="msgTextArea" class="form-control" placeholder="Напишите сообщение"></textarea>
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
