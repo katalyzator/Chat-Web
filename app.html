@@ -2,107 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chat+ Web App</title>
-    <script src="libs/jquery.js"></script>
-    <script src="libs/strophe.min.js"></script>
-
-    <link href="libs/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #chat {
-            position: fixed;
-            bottom: 0;
-            right: 70px;
-            width: 300px;
-            box-shadow: 0 0 10px #468b2f;
-        }
-
-        #chat-header {
-            background-color: #468b2f;
-            color: white;
-            padding: 3px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            font-size: 20px;
-            text-align: center;
-            box-shadow: 0 0 10px #468b2f;
-        }
-
-        #chat-body {
-            height: 300px;
-        }
-
-        #msgTextArea {
-            height: 40px;
-            width: 290px;
-            resize: none;
-            padding: 3px;
-        }
-
-        #control {
-            height: 55px;
-            position: fixed;
-            bottom: 0;
-            background-color: #ccc;
-            padding: 5px;
-        }
-
-        .incomeMsg {
-            width: 200px;
-            margin-top: 3px;
-            padding: 5px;
-            color: white;
-            background-color: #757eff;
-            border-radius: 5px;
-            float: left;
-            word-break: break-all;
-        }
-
-        .outcomeMsg {
-            width: 200px;
-            padding: 5px;
-            margin-top: 3px;
-            color: white;
-            background-color: #ff1f7b;
-            border-radius: 5px;
-            word-break: break-all;
-            float: right;
-        }
-
-        #msgs {
-            height: 245px;
-            overflow: auto;
-            padding: 5px;
-        }
-        .hide-button {
-            float: left;
-            margin: 1px;
-            box-shadow: 0 0 10px #000000;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/strophe.min.js"></script>
+    <script src="js/app.js"></script>
+    <title>Chat+</title>
 </head>
 <body>
-    <div id="chat">
-        <div id="chat-header">
-            <!--<div class="hide-button">-->
-                <!--<a href="">Свернуть</a>-->
-            <!--</div>-->
-            Chat+ Web
+<div class="panel panel-primary" id="chat-container">
+    <div class="panel-heading" id="chat-head">
+        <span class="glyphicon glyphicon-comment"></span> Chat+
+        <div class="btn-group pull-right">
+            <button type="button" id="hide-chat" class="btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
         </div>
-        <div id="chat-body">
-            <div id="msgs">
-
-            </div>
-            <div id="control">
-                <textarea id="msgTextArea" class="form-control" placeholder="Напишите сообщение"></textarea>
+    </div>
+    <div id="chat-body">
+        <div class="panel-body">
+            <ul class="chat">
+                <!--<li class="clearfix">-->
+                    <!--<div class="chat-body clearfix">-->
+                        <!--<div class="header">-->
+                            <!--<strong class="primary-font">Jack Sparrow</strong>-->
+                            <!--<small class="pull-right text-muted">-->
+                                <!--<span class="glyphicon glyphicon-time"></span>12 mins ago-->
+                            <!--</small>-->
+                        <!--</div>-->
+                        <!--<p>-->
+                            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare-->
+                            <!--dolor, quis ullamcorper ligula sodales.-->
+                        <!--</p>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="clearfix">-->
+                    <!--<div class="chat-body clearfix">-->
+                        <!--<div class="header">-->
+                            <!--<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>-->
+                            <!--<strong class="pull-right primary-font">Bhaumik Patel</strong>-->
+                        <!--</div>-->
+                        <!--<p>-->
+                            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare-->
+                            <!--dolor, quis ullamcorper ligula sodales.-->
+                        <!--</p>-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="panel-footer">
+            <div class="form-group">
+                <input id="msg-text" type="text" class="form-control" placeholder="Введите сообщение...">
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+</div>
 </body>
 </html>
